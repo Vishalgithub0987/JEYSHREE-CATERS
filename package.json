@@ -1,0 +1,38 @@
+{
+  "name": "royal-feast-catering",
+  "version": "1.0.0",
+  "description": "Modern Catering Food Menu & Customer Selection Web Platform",
+  "type": "module",
+  "scripts": {
+    "server": "node server/index.js",
+    "client": "vite",
+    "build": "vite build",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "start": "node server/index.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "canvas-confetti": "^1.9.4",
+    "clsx": "^2.1.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "lucide-react": "^0.477.0",
+    "multer": "^1.4.5-lts.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tailwind-merge": "^2.6.0",
+    "ws": "^8.18.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "@vitejs/plugin-react": "^4.3.4",
+    "autoprefixer": "^10.4.20",
+    "concurrently": "^9.1.2",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^3.4.17",
+    "vite": "^6.2.0"
+  }
+}

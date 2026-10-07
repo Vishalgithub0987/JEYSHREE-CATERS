@@ -1,0 +1,68 @@
+import { GalleryItem } from '@/types';
+
+export const galleryItems: GalleryItem[] = [
+  {
+    id: 'gal-1',
+    title: 'Traditional Wedding Banana Leaf Feast',
+    category: 'Banana Leaf Feast',
+    image: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1200&q=80',
+    alt: 'Traditional South Indian wedding banquet served on fresh plantain leaves',
+    caption: '18-item auspicious wedding feast served to 1,200 guests with meticulous ritual order.',
+  },
+  {
+    id: 'gal-2',
+    title: 'Grand Reception Buffet Setup',
+    category: 'Weddings',
+    image: 'https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=80',
+    alt: 'Elegantly lit reception buffet tables with copper chafing dishes',
+    caption: 'Illuminated brass and copper warmers featuring Chettinad specialties and fragrant biryanis.',
+  },
+  {
+    id: 'gal-3',
+    title: 'Live Crispy Dosa & Tawa Counter',
+    category: 'Live Counters',
+    image: 'https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=1200&q=80',
+    alt: 'Master chef pouring ghee on golden paper roast dosas on a live cast-iron griddle',
+    caption: 'Chefs preparing 12 varieties of dosas with 4 freshly stone-ground chutneys.',
+  },
+  {
+    id: 'gal-4',
+    title: 'Royal Sweets & Payasam Platter',
+    category: 'Sweets & Desserts',
+    image: 'https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=1200&q=80',
+    alt: 'Artisanal South Indian sweets including ghee Mysore pak and golden jalebis',
+    caption: 'Warm Jaggery Halwas, Mysore Pak, and saffron-garnished Elaneer Payasam.',
+  },
+  {
+    id: 'gal-5',
+    title: 'Corporate Banquet & Networking Lunch',
+    category: 'Banquets',
+    image: 'https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1200&q=80',
+    alt: 'Corporate dining hall with uniformed banquet servers and multi-cuisine buffet',
+    caption: 'Multi-course executive buffet executed with precision timing for 400 delegates.',
+  },
+  {
+    id: 'gal-6',
+    title: 'Muhurtham Morning Breakfast Spread',
+    category: 'Banana Leaf Feast',
+    image: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=1200&q=80',
+    alt: 'Freshly steamed idlis, crispy medu vadas, pongal and coconut chutneys',
+    caption: 'Dawn wedding breakfast featuring melt-in-mouth Ven Pongal and Kumbakonam filter coffee.',
+  },
+  {
+    id: 'gal-7',
+    title: 'Artisanal Welcome Beverage Station',
+    category: 'Live Counters',
+    image: 'https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=1200&q=80',
+    alt: 'Chilled brass urns filled with Nannari sarbath and Panakam garnished with mint',
+    caption: 'Refreshing welcome drinks in carved clay glasses and brass chalices.',
+  },
+  {
+    id: 'gal-8',
+    title: 'Clay Oven Tandoori & Skewered Starters',
+    category: 'Live Counters',
+    image: 'https://images.unsplash.com/photo-1599488615731-7e5c2823ff28?auto=format&fit=crop&w=1200&q=80',
+    alt: 'Smoked paneer tikkas and spiced kebabs fresh from charcoal tandoors',
+    caption: 'Live charcoal ovens serving hot rotis and sizzling starters on circulation.',
+  },
+];

@@ -1,126 +1,111 @@
-# Royal Feast Caterers — Catering Food Menu & Customer Selection Platform
+# JayShree Caters — Authentic South Indian Catering & Traditional Feasts
 
-A modern, production-grade **Catering Food Menu & Customer Selection Web Platform** featuring live menu curation, real-time cart synchronization, role-based customer & admin authentication, WebSocket live order streams, and comprehensive WhatsApp integration (Meta Cloud API & prefilled direct links).
+A modern, production-grade web platform for **JayShree Caters**, an authentic South Indian catering and celebration banquet service based in K V Kuppam, Tamil Nadu.
 
----
-
-## 🌟 Key Highlights & Features
-
-### 🍽️ 1. Interactive Catering Food Menu & Live Selection
-* **40+ Authentic Catering Dishes** spanning 7 categories:
-  * **Starters** (Chicken 65, Chicken Lollipop, Chicken Tikka, Paneer Tikka, Gobi 65, Vegetable Cutlet, Crispy Corn, Fish Amritsari)
-  * **Biryani / Rice** (Chicken Biryani, Mutton Biryani, Veg Biryani, Mutton Pulao, Jeera Rice, Fried Rice, Ghee Rice)
-  * **Main Course** (Butter Chicken, Chicken Curry, Mutton Curry, Paneer Butter Masala, Mixed Vegetable Curry, Dal Tadka)
-  * **Breads** (Naan, Butter Naan, Parotta, Chapati, Tandoori Roti)
-  * **Side Dishes** (Onion Raita, Boondi Raita, Mixed Salad, Pickle & Papad)
-  * **Desserts** (Gulab Jamun, Rasmalai, Artisanal Ice Cream, Gajar Halwa, Palada Payasam, Fresh Fruit Salad)
-  * **Drinks** (Fresh Lime Soda, Mango Juice, Badam Milk, Welcome Drink Rose Milk & Mojito)
-* **Live Selection UX**:
-  * One-click "Select" turns immediately to "✓ Selected"; clicking again removes the dish.
-  * **Desktop**: Sticky right-side panel displaying "Your Selection", live items counter, category tags, clear button, and "Review Selection" CTA.
-  * **Mobile**: Floating bottom badge with slide-up selection drawer.
-* **Instant Filtering & Search**:
-  * Search by food name, description, and chef ingredients.
-  * Filter by category tabs and dietary preferences (Pure Veg vs. Non-Veg).
-* **Recipe & Chef Ingredients Modal**:
-  * Clicking any food card opens an extensive modal showcasing high-resolution food photography, culinary notes, ingredients list, and catering highlights.
+Built with **Next.js (App Router)**, **React**, **TypeScript**, **Pure Vanilla CSS / CSS Modules (No Tailwind)**, **GSAP & GSAP ScrollTrigger**, **Lenis Smooth Scroll**, and **Next.js Image Optimization**.
 
 ---
 
-### 📲 2. Dual WhatsApp Integration (Admin + Customer)
-* **Automatic Server-Side & Fallback Support**:
-  * Formatted notification sent to **Admin WhatsApp Number** with customer name, phone, event type, date, guests, location, and full selected dishes checklist.
-  * Formatted confirmation sent to **Customer's WhatsApp Number** with Request ID, selected menu items, and catering confirmation.
-  * Built-in fallback links (`https://wa.me/...`) prefilled with encoded text so WhatsApp opens instantly on desktop web or mobile devices even when external Meta credentials are not configured.
-  * Admin Settings panel to configure phone numbers, Meta Cloud API tokens, test notification dispatch, and inspect delivery logs.
+## 🌟 Key Highlights & Architecture
+
+### 1. Auspicious Hero Intro Animation (GSAP)
+- Authentic traditional South Indian ceremonial curtain opening animation:
+  - Ivory background with subtle golden radiance and floating Kolam motifs.
+  - Jasmine and marigold garlands enter from both sides, forming an auspicious traditional wedding arch.
+  - Sacred JayShree Caters emblem logo reveals in center with golden rays.
+  - Garlands part open like a traditional mandap curtain, revealing the hero section.
+  - Fast-path skip and repeat-visit detection via `sessionStorage` and `prefers-reduced-motion` support.
+
+### 2. DB-Less Centralized Content Architecture
+The platform is completely database-free, eliminating fragile JSON flat files or ORM dependencies while keeping content 100% dynamic and configurable:
+- `src/data/site.ts`: Central business metadata, phone numbers, WhatsApp, Mylapore address, operating hours, and metrics.
+- `src/data/services.ts`: Catering service packages with guest capacities, description, and highlights.
+- `src/data/menu.ts`: 40+ authentic dishes spanning Starters, Biryani & Traditional Rice, Curries & Main Course, Breads, Pachadi & Accompaniments, Desserts & Sweets, and Beverages.
+- `src/data/bananaLeaf.ts`: Traditional Plantain Leaf Feast (Arusuvai Virundhu) sequential arrangement rules and descriptions.
+- `src/data/events.ts`: Occasion packages (Weddings, Griha Pravesham, Receptions, Corporate Galas, Milestones).
+- `src/data/gallery.ts`: Editorial photography categorized by feast type.
+- `src/data/testimonials.ts`: Verified South Indian host reviews.
+
+### 3. Live Menu Curation & Practical WhatsApp Enquiry Flow
+- Instant live dish selection ("Select" / "✓ Selected") with category and dietary filters (Pure Veg vs. Non-Veg).
+- Dish Details Modal showing culinary notes, stone-ground spices, and ingredients.
+- Slide-out Selection Review Drawer with full form validation:
+  - Full Name (required)
+  - Mobile / WhatsApp Number (validated for 10 digits)
+  - Celebration Occasion & Date
+  - Expected Guest Count
+  - Event Location / Hall
+  - Special Dietary & Service Notes
+- Submits to `/api/enquiry` with server-side validation and automatically generates a formatted WhatsApp inquiry link:
+  ```
+  🙏 NAMASKARAM JAYSHREE CATERS
+  I would like to enquire about catering for an upcoming celebration.
+  
+  👤 Name: [Customer Name]
+  📞 Phone: [Customer Phone]
+  🎉 Event: Wedding / Muhurtham
+  📅 Event Date: [Date]
+  👥 Expected Guests: [Count]
+  📍 Location: [Venue]
+  
+  🍽️ SELECTED MENU ITEMS (X):
+    1. Medu Vada (Starters • Veg)
+    2. Ennai Kathirikai (Main Course • Veg)
+    ...
+  ```
+
+### 4. Visual Identity & Design System
+- Strictly complies with the 70% Ivory / 20% Forest Green / 8% Warm Gold / 2% Accent brand palette:
+  - `--green: #075B35;`
+  - `--green-dark: #034226;`
+  - `--gold: #E5B52A;`
+  - `--gold-soft: #F4D98A;`
+  - `--ivory: #FFFDF7;`
+  - `--cream: #F7F3E8;`
+  - `--text: #173B2A;`
+- Pure Vanilla CSS styling (No Tailwind CSS).
+- Google Fonts: *Playfair Display*, *Cormorant Garamond*, and *Inter*.
 
 ---
 
-### 🔐 3. Authentication & Roles
-* **Secure JWT Authentication** with bcrypt password hashing.
-* **Customer Role**:
-  * Registration with event metadata (Event Type, Date, Expected Guests, City/Location).
-  * Customer Dashboard with live draft counters and event date tracking.
-  * "My Requests" history with status pills and details modals.
-  * Profile management.
-* **Admin Role**:
-  * Secure Admin Dashboard with 5 live statistics cards.
-  * Request Management (update statuses: *New*, *Contacted*, *Confirmed*, *Completed*, *Cancelled*).
-  * Food Menu CRUD (Add, Edit, Delete, Toggle Live Availability, Upload Images).
-  * Customer Directory with WhatsApp quick-chat buttons.
-  * WhatsApp Configuration and Audit Logs.
+## 🚀 Getting Started
 
----
-
-## 👥 Demo Login Credentials
-
-For quick evaluation, use the one-click demo fill buttons on the Login page:
-
-| Role | Email / Identifier | Password | Dashboard Access |
-| :--- | :--- | :--- | :--- |
-| **Admin** | `admin@royalfeast.com` | `Admin@123` | Full Admin Operations, Requests & Settings |
-| **Customer** | `vishal@example.com` | `User@123` | Customer Dashboard, Menu Selection & Orders |
-
-*(You can also register any new customer account with your own custom phone & event dates)*
-
----
-
-## 🛠️ Architecture & Tech Stack
-
-```
-Frontend (Vite + React 18 + Tailwind CSS + Lucide Icons + Canvas Confetti)
-       │
-       │ HTTP / JSON API & WebSocket Stream (/ws)
-       ▼
-Backend (Node.js + Express.js + WebSockets + JWT + Bcryptjs + Multer)
-       │
-       ├─► Persistent Transactional Database Engine (Atomic JSON Data Store)
-       │     ├── server/data/foods.json
-       │     ├── server/data/users.json
-       │     ├── server/data/requests.json
-       │     └── server/data/settings.json
-       │
-       └─► WhatsApp Integration Hub (server/whatsapp.js)
-             ├── Meta WhatsApp Cloud API (Graph API v19.0)
-             └── Direct wa.me Deep Links Fallback Generator
-```
-
----
-
-## 🚀 Running the Application
-
-### 1. Unified Production Server (Recommended)
-The server serves both the backend API and frontend client from a single command:
+### 1. Installation
 ```bash
-node server/index.js
+npm install
 ```
-Open **[http://localhost:5000](http://localhost:5000)** in your browser.
 
-### 2. Full Development Environment (with Hot-Reload)
-Run both backend and Vite dev server concurrently:
+### 2. Development Server
 ```bash
 npm run dev
 ```
-Open **[http://localhost:5173](http://localhost:5173)** in your browser.
+Open **[http://localhost:3000](http://localhost:3000)** in your browser.
+
+### 3. Production Build & Execution
+```bash
+npm run build
+npm run start
+```
 
 ---
 
-## ⚙️ Environment Variables (`.env`)
+## 🛠️ Verification Checklist
 
-```env
-PORT=5000
-JWT_SECRET=royal_feast_super_secure_jwt_secret_catering_2026_key
-ADMIN_WHATSAPP_NUMBER=+919876543210
-WHATSAPP_ACCESS_TOKEN=
-WHATSAPP_PHONE_NUMBER_ID=
-WHATSAPP_API_ENABLED=false
-COMPANY_NAME=Royal Feast Caterers
-COMPANY_PHONE=+919876543210
-COMPANY_EMAIL=contact@royalfeastcaterers.com
-COMPANY_ADDRESS=No. 42, Heritage Boulevard, Alwarpet, Chennai, Tamil Nadu 600018
-```
+- [x] Next.js App Router with TypeScript strict typing
+- [x] Zero database dependencies (Prisma, PostgreSQL, MySQL, Mongo, SQLite, flat JSON files removed)
+- [x] Zero Tailwind CSS (Pure CSS design system)
+- [x] GSAP Hero opening animation with jasmine/marigold garlands and skip mechanism
+- [x] Lenis smooth scrolling with `prefers-reduced-motion` compliance
+- [x] Next.js Image optimization (`next/image`)
+- [x] 40+ authentic dishes with live selection and ingredient modals
+- [x] Traditional Banana Leaf Feast feature section
+- [x] Server-validated API endpoints (`/api/enquiry`, `/api/contact`)
+- [x] Centralized WhatsApp helper generating dynamic URLs
+- [x] Mobile sticky Call / WhatsApp CTA
+- [x] SEO metadata & LocalBusiness JSON-LD schema
+- [x] Production build passes with 0 errors
 
 ---
 
 ## 📄 License & Credits
-&copy; 2026 Royal Feast Caterers. All Rights Reserved. Built for high-volume wedding buffets and corporate catering operations.
+&copy; 2026 JayShree Caters. All Rights Reserved. Handcrafted for authentic South Indian celebrations.

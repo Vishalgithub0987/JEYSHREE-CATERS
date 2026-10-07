@@ -1,0 +1,12 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M24 2L29.5 15.5L44 17L33 27L36 41.5L24 34L12 41.5L15 27L4 17L18.5 15.5L24 2Z" fill="url(#goldGrad)" stroke="#B88916" stroke-width="1.5"/>
+  <circle cx="24" cy="24" r="8" fill="#052020" stroke="#E4C590" stroke-width="1"/>
+  <path d="M24 19V29M19 24H29" stroke="#E4C590" stroke-width="1.5" stroke-linecap="round"/>
+  <defs>
+    <linearGradient id="goldGrad" x1="4" y1="2" x2="44" y2="41.5" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F4D98A"/>
+      <stop offset="0.5" stop-color="#E5B52A"/>
+      <stop offset="1" stop-color="#B88916"/>
+    </linearGradient>
+  </defs>
+</svg>

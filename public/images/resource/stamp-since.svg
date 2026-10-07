@@ -1,0 +1,12 @@
+<svg width="130" height="130" viewBox="0 0 130 130" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="65" cy="65" r="60" stroke="#C89F5C" stroke-width="2" stroke-dasharray="4 3"/>
+  <circle cx="65" cy="65" r="54" stroke="#E4C590" stroke-width="1.5"/>
+  <circle cx="65" cy="65" r="48" fill="#052020" stroke="#C89F5C" stroke-width="1"/>
+  <!-- Decorative Starburst -->
+  <path d="M65 24L67 30L73 30L68 34L70 40L65 36L60 40L62 34L57 30L63 30Z" fill="#E4C590"/>
+  <!-- Inner Text -->
+  <text x="65" y="55" text-anchor="middle" fill="#E4C590" font-family="'Playfair Display', Georgia, serif" font-size="9" font-weight="700" letter-spacing="2">TRADITION</text>
+  <text x="65" y="71" text-anchor="middle" fill="#FFFFFF" font-family="'Playfair Display', Georgia, serif" font-size="13" font-weight="800" letter-spacing="1">SINCE</text>
+  <text x="65" y="89" text-anchor="middle" fill="#E4C590" font-family="'Playfair Display', Georgia, serif" font-size="17" font-weight="800" letter-spacing="1">1960s</text>
+  <text x="65" y="103" text-anchor="middle" fill="#A0B0A8" font-family="Arial, sans-serif" font-size="7" font-weight="700" letter-spacing="1">4 GENERATIONS</text>
+</svg>
